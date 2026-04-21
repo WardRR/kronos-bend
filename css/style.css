@@ -318,13 +318,11 @@ h3 {
 /* --------------------------------------------------------------------- FORMS */
 .contact-form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto; /*margine gura u sredinu*/
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-
-/*skoro cijeli copy paste od postojeceg*/
 
 .form-group {
     display: flex;
@@ -335,7 +333,7 @@ label {
     margin-bottom: 0.5rem;
 }
 
-input, textarea {
+input, textarea { /*mjesta uokolo polja da tekst nije do ruba*/
     padding: 0.8rem;
     background: #333;
     border: 1px solid #444;
@@ -345,7 +343,9 @@ input, textarea {
 
 /* --------------------------------------------------------------------- RESPONSIVE DESIGN (Mobile 375px) */
 @media (max-width: 375px) {
-    .hamburger { display: block; }
+    .hamburger { 
+        display: block;
+    }
     
     .nav-links {
         display: none;
@@ -359,5 +359,8 @@ input, textarea {
         text-align: center;
     }
 
-    .menu-toggle:checked ~ .nav-links { display: flex; } 
+    /*umjesto PHPa ili JS sam stavio checkbox kojeg aktiviram (pomoću zadanog flexa, umjesto none)*/
+    .menu-toggle:checked ~ .nav-links { /*zmijica */
+        display: flex;
+    } 
 }
