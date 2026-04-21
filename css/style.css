@@ -3,6 +3,7 @@
     --primary-color: #c41e3a;
     --secondary: #e23350;
     --primary-hover: #ff2e4a;
+    --wowfactor: #ffff00d6;
     --bg-dark: #1a1a1a;
     --bg-black: #0d0d0d;
     --bg-card: #252525;
@@ -220,6 +221,57 @@ h3 {
     text-align: left;
     font-size: 1.4rem;
 }
+
+/* --------------------------------------------------------------------- CARDS */
+
+.ticket-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.ticket-section .ticket-card {
+    background: var(--bg-card);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+}
+
+.ticket-section .ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.ticket-section .ticket-price {
+    color: var(--wowfactor);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.ticket-section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.ticket-section p {
+    color: var(--text-light);
+    font-size: 1rem;
+    text-align: center;
+}
+
+
 
 /* --------------------------------------------------------------------- GRID FOR GALLERY */
 
