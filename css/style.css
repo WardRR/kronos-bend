@@ -184,6 +184,32 @@ h3 {
     display: block;
 }
 
+/* --------------------------------------------------------------------- IMAGE IN PLAN, SECTION */
+
+.image-in-plan {
+    display: flex;
+
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.image-in-plan p {
+    font-size: 1rem;
+    text-align: right;
+}
+
+.image-in-plan img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: (var(--primary-hover));
+}
+
+.image-in-plan img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
 /* --------------------------------------------------------------------- HERO SEKCIJA */
 .hero {
     background-color: var(--bg-card);
@@ -259,11 +285,20 @@ h3 {
 
 .ticket-section img {
     width: 100%;
-    height: 200px;
+    height: max-content;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 5px;
 }
+
+/* Ako želimo fiksnu veličinu slika unutar karata na stranici, možemo koristiti sljedeći kod: */
+#main-content .ticket-section img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin: 0 auto 10px;
+}
+
 
 .ticket-section p {
     color: var(--text-light);
