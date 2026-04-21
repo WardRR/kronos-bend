@@ -342,10 +342,8 @@ input, textarea { /*mjesta uokolo polja da tekst nije do ruba*/
 }
 
 /* --------------------------------------------------------------------- RESPONSIVE DESIGN (Mobile 375px) */
-@media (max-width: 375px) {
-    .hamburger { 
-        display: block;
-    }
+@media (max-width: 768px) {
+    .hamburger {display: block; }
     
     .nav-links {
         display: none;
