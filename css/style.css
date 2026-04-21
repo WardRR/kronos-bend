@@ -13,22 +13,6 @@
     --container-width: 1200px;
 }
 
-/* Stil za Skip Link - on je skriven dok netko ne krene navigirati tab-om */
-.skip-link {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    background: #c41e3a;
-    color: white;
-    padding: 10px;
-    z-index: 1000;
-    text-decoration: none;
-}
-
-.skip-link:focus {
-    top: 0; /* Pojavljuje se na vrhu ekrana kada se stisne tipka TAB */
-}
-
 /* --------------------------------------------------------------------- BASE STYLES */
 * {
     margin: 0;
@@ -44,21 +28,25 @@ body {
     align-items: center;
 }
 
-/* Skip link za korištenje TAB-a */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--primary-color);
-    color: white;
-    padding: 8px;
-    z-index: 101;
-}
-.skip-link:focus { top: 0; }
-
 section {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------- Skip link (za korištenje TAB-om) */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0; /* Pojavljuje se na vrhu ekrana kada se stisne tipka TAB */
 }
 
 /* --------------------------------------------------------------------- NAVIGATION */
@@ -77,6 +65,8 @@ footer {
     color: var(--text-gray);
     font-size: 0.9rem;
 }
+
+/* korištenje flexboxa za lakši ravnomjerni raspored */
 
 nav {
     display: flex;
@@ -109,28 +99,20 @@ nav {
     display: block;
 }
 
-.logo-img {
-    height: 40px;
-    margin-right: 10px;
-    vertical-align: middle;
-    width: 30%;
-    object-fit: cover;
-}
-
 .nav-links {
     display: flex;
-    list-style: none;
+    list-style: none; /* ugasio sam si bullete*/
     gap: 2rem;
 }
 
-.nav-links a {
+.nav-links a { /* izlged linkova u navigaciji */
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover, .nav-links a.active { /* stil kada prelazim misem i kad je aktivna*/
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
@@ -222,6 +204,8 @@ h3 {
     margin-bottom: 50px;
 }
 
+/*koristio sam 90 % AI za hero, ima previše tih opcija bratee......*/
+
 .hero img {
     max-width: 80%;
     height: auto;
@@ -312,7 +296,7 @@ h3 {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ova naredba dopušta da napravi stupaca koliko mi stane na stranicu*/
     gap: 20px;
     margin-top: 2rem;
 }
@@ -327,7 +311,7 @@ h3 {
 .photo-card img {
     width: 100%;
     height: 250px;
-    object-fit: contain; /* Sprečava rastezanje slike */
+    object-fit: contain; /* Sprječava rastezanje slike */
     border-radius: 4px;
 }
 
@@ -340,12 +324,16 @@ h3 {
     gap: 1.5rem;
 }
 
+/*skoro cijeli copy paste od postojeceg*/
+
 .form-group {
     display: flex;
     flex-direction: column;
 }
 
-label { margin-bottom: 0.5rem; }
+label {
+    margin-bottom: 0.5rem;
+}
 
 input, textarea {
     padding: 0.8rem;
@@ -356,7 +344,7 @@ input, textarea {
 }
 
 /* --------------------------------------------------------------------- RESPONSIVE DESIGN (Mobile 375px) */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .hamburger { display: block; }
     
     .nav-links {
@@ -371,5 +359,5 @@ input, textarea {
         text-align: center;
     }
 
-    .menu-toggle:checked ~ .nav-links { display: flex; }
+    .menu-toggle:checked ~ .nav-links { display: flex; } 
 }
