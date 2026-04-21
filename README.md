@@ -4,7 +4,10 @@ Web je izrađen na temelju polu-fiktivnog benda. Bend kroz stranicu informira sl
 
 ## Stranice
 
-
+[INDE0X, Početna](/index.html)
+[ABOUT, O nama](/about.html)
+[GALLERY, Galerija](/gallery.html)
+[CONTACT, Kontakt](/contact.html)
 
 ## Kako pokrenuti
 Otvori index.html u browseru ili koristi Live Server u VS Code.
