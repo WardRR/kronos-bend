@@ -4,13 +4,25 @@ Web je izrađen na temelju polu-fiktivnog benda. Bend kroz stranicu informira sl
 
 ## Stranice
 
-[INDE0X, Početna](/index.html)
+Kodovi:
 
-[ABOUT, O nama](/about.html)
+[INDEX](/index.html)
 
-[GALLERY, Galerija](/gallery.html)
+[ABOUT](/about.html)
 
-[CONTACT, Kontakt](/contact.html)
+[GALLERY](/gallery.html)
+
+[CONTACT](/contact.html)
+
+Stranice:
+
+[Početna](https://kronosofficial.netlify.app/)
+
+[O nama](https://kronosofficial.netlify.app/about)
+
+[Galerija](https://kronosofficial.netlify.app/gallery)
+
+[Kontakt](https://kronosofficial.netlify.app/contact)
 
 ## Kako pokrenuti
 Otvori index.html u browseru ili koristi Live Server u VS Code.
